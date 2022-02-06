@@ -1,5 +1,9 @@
 use std::ops::{Add, Mul, Sub};
 
+pub mod prelude {
+    pub use crate::smooth_damp;
+}
+
 // from Game programming gems 4
 // TODO: switch to returning tuples when tuple assignment is stable
 pub fn smooth_damp<T>(current: T, target: T, vel: &mut T, smooth_time: f32, delta_time: f32) -> T
