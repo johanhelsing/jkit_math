@@ -1,7 +1,9 @@
 use std::ops::{Add, Mul, Sub};
 
+pub mod vec_traits;
+
 pub mod prelude {
-    pub use crate::smooth_damp;
+    pub use crate::{smooth_damp, vec_traits::*};
 }
 
 // from Game programming gems 4
