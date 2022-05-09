@@ -25,12 +25,16 @@ where
     target + (change + temp) * exp
 }
 
+pub fn sqr<T: std::ops::Mul + Copy + Mul<Output = T>>(x: T) -> T {
+    x * x
+}
+
 #[cfg(test)]
 mod tests {
     use approx::assert_relative_eq;
     use bevy::math::Vec2;
 
-    use crate::smooth_damp;
+    use crate::{smooth_damp, sqr};
 
     #[test]
     fn smooth_damp_converges() {
@@ -61,5 +65,11 @@ mod tests {
 
         assert_relative_eq!(current.x, target.x);
         assert_relative_eq!(current.x, target.x);
+    }
+
+    #[test]
+    fn sqr_4() {
+        assert_eq!(sqr(4), 16);
+        assert_eq!(sqr(-4), 16);
     }
 }
