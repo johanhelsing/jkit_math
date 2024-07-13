@@ -7,7 +7,7 @@ authors = ["Johan Helsing <johanhelsing@gmail.com>"]
 repository = "https://github.com/johanhelsing/jkit_math"
 
 [dependencies]
-bevy = { version = "0.13", default-features = false }
+bevy = { version = "0.14", default-features = false }
 
 [dev-dependencies]
 approx = "0.5"
